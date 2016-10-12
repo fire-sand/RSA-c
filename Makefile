@@ -1,7 +1,7 @@
 TARGET = bignum
 LIBS = -lm
 CC = clang
-CFLAGS = -g -Weverything
+CFLAGS = -g -Wall
 
 .PHONY: default all clean
 
@@ -22,17 +22,3 @@ $(TARGET): $(OBJECTS)
 clean:
 	-rm -f *.o
 	-rm -f $(TARGET)
-
-
-
-# CC=clang
-# CFLAGS=-g -Weverything
-# TARGET=bignum
-
-# all: $(TARGET)
-
-# $(TARGET): $(TARGET).c
-# 	  $(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
-
-# clean:
-# 	  $(RM) $(TARGET)
