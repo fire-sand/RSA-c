@@ -34,6 +34,8 @@ bignum *bn_add(const bignum *x, const bignum *y, bignum *z) {
 
   if (m < n) return bn_add(y, x, z);
 
+  bn_clear(z);
+
   int i;
   Word carry = 0;
   for (i = 0; i <= n; ++i) {
